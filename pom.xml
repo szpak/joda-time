@@ -541,6 +541,21 @@
           <logResults>true</logResults>
         </configuration>
       </plugin>
+      <plugin>
+         <groupId>org.pitest</groupId>
+         <artifactId>pitest-maven</artifactId>
+         <version>1.2.2</version>
+         <configuration>
+           <targetClasses>
+             <param>org.joda.time*</param>
+           </targetClasses>
+           <targetTests>
+              <param>org.joda.time*</param>
+           </targetTests>
+           <!--    <verbose>true</verbose> -->
+	   <!--    <threads>4</threads> -->
+         </configuration>
+       </plugin>
     </plugins>
     <!-- Manage plugin versions -->
     <pluginManagement>
@@ -707,7 +722,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.2</version>
+      <version>4.12</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
